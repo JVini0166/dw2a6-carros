@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+}
+
+form {
+    display: table;
+}
+
+p.auth {
+    display: table-row;
+}
+
+label.auth {
+    display: table-cell;
+}
+
+input.auth {
+    display: table-cell;
+    width: 250px;
+}
+
+.errorMsg {
+    display: table-cell;
+    padding-left: 10px;
+    color:red;
+    font-size:0.9em;
+}
