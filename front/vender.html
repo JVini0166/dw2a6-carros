@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Detail Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        .header, .footer {
+            background-color: #100E75;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: white;
+        }
+        .nav-link:hover {
+            color: #E37611;
+        }
+        .car-info, .contact-info {
+            background-color: #100E75;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .contact-info {
+            background-color: #E37611;
+        }
+    </style>
+</head>
+<body>
+    <header class="header py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">LOGO</div>
+            <nav>
+                <a class="nav-link d-inline-block mx-2" href="#">Comprar</a>
+                <a class="nav-link d-inline-block mx-2" href="#">Vender</a>
+                <a class="nav-link d-inline-block mx-2" href="#">Serviços</a>
+                <a class="nav-link d-inline-block mx-2" href="#">Ajuda</a>
+            </nav>
+            <a class="nav-link d-inline-block" href="#">Entrar</a>
+        </div>
+    </header>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Nova Venda</h1>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 car-info">
+                <h2>Dados do veículo</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" class="form-control" id="marca" placeholder="Selecione a marca">
+                    </div>
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" class="form-control" id="modelo" placeholder="Selecione o modelo">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="anoModelo">Ano do modelo</label>
+                            <input type="text" class="form-control" id="anoModelo" placeholder="Ano do modelo">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="anoFabricacao">Ano de Fabricação</label>
+                            <input type="text" class="form-control" id="anoFabricacao" placeholder="Ano de Fabricação">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="versao">Versão</label>
+                        <input type="text" class="form-control" id="versao" placeholder="Selecione a versão">
+                    </div>
+                    <div class="form-group">
+                        <label for="cor">Cor</label>
+                        <input type="text" class="form-control" id="cor" placeholder="Selecione a cor">
+                    </div>
+                    <div class="form-group">
+                        <label for="quilometragem">Quilometragem</label>
+                        <input type="text" class="form-control" id="quilometragem" placeholder="Quilometragem do carro">
+                    </div>
+                    <div class="form-group">
+                        <label for="valor">Valor</label>
+                        <input type="text" class="form-control" id="valor" placeholder="Valor do carro (R$)">
+                    </div>
+                    <h3>Itens do veículo</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="airbag">
+                                <label class="form-check-label" for="airbag">Airbag</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="alarme">
+                                <label class="form-check-label" for="alarme">Alarme</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="ar-condicionado">
+                                <label class="form-check-label" for="ar-condicionado">Ar Condicionado</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="direcao-hidraulica">
+                                <label class="form-check-label" for="direcao-hidraulica">Direção Hidráulica</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rodas-liga-leve">
+                                <label class="form-check-label" for="rodas-liga-leve">Rodas de Liga Leve</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="freio-abs">
+                                <label class="form-check-label" for="freio-abs">Freio ABS</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="travas-eletricas">
+                                <label class="form-check-label" for="travas-eletricas">Travas Elétricas</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="vidros-eletricos">
+                                <label class="form-check-label" for="vidros-eletricos">Vidros Elétricos</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="ar-quente">
+                                <label class="form-check-label" for="ar-quente">Ar Quente</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 contact-info">
+                <h2>Dados do proprietário</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nomeProprietario">Nome do proprietário</label>
+                        <input type="text" class="form-control" id="nomeProprietario" placeholder="Nome do proprietário">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailProprietario">E-mail do proprietário</label>
+                        <input type="email" class="form-control" id="emailProprietario" placeholder="E-mail do proprietário">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefoneProprietario">Telefone do proprietário</label>
+                        <input type="tel" class="form-control" id="telefoneProprietario" placeholder="Telefone do proprietário">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="cepProprietario">CEP do proprietário</label>
+                            <input type="text" class="form-control" id="cepProprietario" placeholder="CEP do proprietário">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cpfProprietario">CPF do proprietário</label>
+                            <input type="text" class="form-control" id="cpfProprietario" placeholder="CPF do proprietário">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="enderecoProprietario">Endereço do proprietário</label>
+                        <input type="text" class="form-control" id="enderecoProprietario" placeholder="Endereço do proprietário">
+                    </div>
+                    <h3>Destaques</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="unicoDono">
+                                <label class="form-check-label" for="unicoDono">Único Dono</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="ipvaPago">
+                                <label class="form-check-label" for="ipvaPago">IPVA Pago</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="garantia">
+                                <label class="form-check-label" for="garantia">Garantia de Fábrica</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="revisaoConcessionaria">
+                                <label class="form-check-label" for="revisaoConcessionaria">Revisão em Concessionária</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="manual">
+                                <label class="form-check-label" for="manual">Manual do Proprietário</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer py-3 mt-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Carros Inc. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

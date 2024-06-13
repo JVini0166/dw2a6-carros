@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Listing Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        .header, .footer {
+            background-color: #100E75;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: white;
+        }
+        .nav-link:hover {
+            color: #E37611;
+        }
+        .car-card {
+            background-color: #100E75;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .car-card h5 {
+            background-color: #E37611;
+            padding: 10px;
+            margin-top: -20px;
+            margin-left: -20px;
+            margin-right: -20px;
+            border-radius: 5px 5px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">LOGO</div>
+            <nav>
+                <a class="nav-link d-inline-block mx-2" href="#">Comprar</a>
+                <a class="nav-link d-inline-block mx-2" href="#">Vender</a>
+                <a class="nav-link d-inline-block mx-2" href="#">Serviços</a>
+                <a class="nav-link d-inline-block mx-2" href="#">Ajuda</a>
+            </nav>
+            <a class="nav-link d-inline-block" href="#">Entrar</a>
+        </div>
+    </header>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Carros à Venda</h1>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="bg-white p-3 rounded shadow-sm">
+                    <h3>Filtros</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="marca">Marca</label>
+                            <select class="form-control" id="marca">
+                                <option>Selecione a marca</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="modelo">Modelo</label>
+                            <select class="form-control" id="modelo">
+                                <option>Selecione o modelo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ano">Ano</label>
+                            <select class="form-control" id="ano">
+                                <option>Selecione o ano</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cor">Cor</label>
+                            <select class="form-control" id="cor">
+                                <option>Selecione a cor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="preco">Faixa de preço</label>
+                            <select class="form-control" id="preco">
+                                <option>Selecione a faixa de preço</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <select class="form-control" id="cidade">
+                                <option>Selecione a cidade</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="car-card">
+                            <h5>Modelo Carro</h5>
+                            <div class="text-center mb-3">
+                                <img src="foto.jpg" alt="Foto do carro" class="img-fluid">
+                            </div>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Preço</span>
+                                <a href="#" class="btn btn-warning">Ver Parcelas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="car-card">
+                            <h5>Modelo Carro</h5>
+                            <div class="text-center mb-3">
+                                <img src="foto.jpg" alt="Foto do carro" class="img-fluid">
+                            </div>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Preço</span>
+                                <a href="#" class="btn btn-warning">Ver Parcelas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="car-card">
+                            <h5>Modelo Carro</h5>
+                            <div class="text-center mb-3">
+                                <img src="foto.jpg" alt="Foto do carro" class="img-fluid">
+                            </div>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Preço</span>
+                                <a href="#" class="btn btn-warning">Ver Parcelas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="car-card">
+                            <h5>Modelo Carro</h5>
+                            <div class="text-center mb-3">
+                                <img src="foto.jpg" alt="Foto do carro" class="img-fluid">
+                            </div>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Preço</span>
+                                <a href="#" class="btn btn-warning">Ver Parcelas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="car-card">
+                            <h5>Modelo Carro</h5>
+                            <div class="text-center mb-3">
+                                <img src="foto.jpg" alt="Foto do carro" class="img-fluid">
+                            </div>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Preço</span>
+                                <a href="#" class="btn btn-warning">Ver Parcelas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="car-card">
+                            <h5>Modelo Carro</h5>
+                            <div class="text-center mb-3">
+                                <img src="foto.jpg" alt="Foto do carro" class="img-fluid">
+                            </div>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <p>Informação</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Preço</span>
+                                <a href="#" class="btn btn-warning">Ver Parcelas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer py-3 mt-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Carros Inc. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

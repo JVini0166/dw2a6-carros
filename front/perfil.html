@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        .header, .footer {
+            background-color: #100E75;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: white;
+        }
+        .nav-link:hover {
+            color: #E37611;
+        }
+        .profile-sidebar {
+            background-color: #100E75;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .profile-sidebar img {
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .profile-sidebar h2 {
+            margin-bottom: 15px;
+        }
+        .profile-sidebar .btn {
+            background-color: #E37611;
+            border: none;
+            color: white;
+        }
+        .profile-sidebar .btn:hover {
+            background-color: #d46808;
+        }
+        .profile-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .form-check-label {
+            margin-left: 5px;
+        }
+        .tabs-content {
+            padding: 20px;
+            color: #f0f0f0;
+            background-color: #100E75;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .ad-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .ad-item img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+        .ad-info {
+            flex-grow: 1;
+        }
+        .ad-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #E37611;
+        }
+    </style>
+</head>
+<body>
+    <header class="header py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">LOGO</div>
+            <nav>
+                <a class="nav-link d-inline-block mx-2" href="#">Comprar</a>
+                <a class="nav-link d-inline-block mx-2" href="#">Vender</a>
+                <a class="nav-link d-inline-block mx-2" href="#">Serviços</a>
+                <a class="nav-link d-inline-block mx-2" href="#">Ajuda</a>
+            </nav>
+            <a class="nav-link d-inline-block" href="#">Entrar</a>
+        </div>
+    </header>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="profile-sidebar">
+                    <img src="user.jpg" alt="Foto do usuário" width="150" height="150">
+                    <h2>Nome do Usuário</h2>
+                    <button class="btn btn-warning">Cadastrar Anúncio</button>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9">
+                <div class="profile-content">
+                    <h3>Meus Dados</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nomeUsuario">Nome do Usuário</label>
+                                <input type="text" class="form-control" id="nomeUsuario" placeholder="Nome do Usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="emailUsuario">E-mail do Usuário</label>
+                                <input type="email" class="form-control" id="emailUsuario" placeholder="E-mail do Usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpfUsuario">CPF do Usuário</label>
+                                <input type="text" class="form-control" id="cpfUsuario" placeholder="CPF do Usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="generoUsuario">Gênero do Usuário</label>
+                                <select class="form-control" id="generoUsuario">
+                                    <option>Selecione o gênero</option>
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nascimentoUsuario">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="nascimentoUsuario">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="cepUsuario">CEP do Usuário</label>
+                                <input type="text" class="form-control" id="cepUsuario" placeholder="CEP do Usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="enderecoUsuario">Endereço do Usuário</label>
+                                <input type="text" class="form-control" id="enderecoUsuario" placeholder="Endereço do Usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="estadoUsuario">Estado do Usuário</label>
+                                <input type="text" class="form-control" id="estadoUsuario" placeholder="Estado do Usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="cidadeUsuario">Cidade do Usuário</label>
+                                <input type="text" class="form-control" id="cidadeUsuario" placeholder="Cidade do Usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefoneUsuario">Telefone do Usuário</label>
+                                <input type="text" class="form-control" id="telefoneUsuario" placeholder="Telefone do Usuário">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="exibirTelefone">
+                                <label class="form-check-label" for="exibirTelefone">Exibir o telefone para contato no anúncio</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anúncios -->
+                <div class="tabs-content">
+                    <ul class="nav nav-tabs" id="anunciosTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="ativos-tab" data-toggle="tab" href="#ativos" role="tab" aria-controls="ativos" aria-selected="true">Ativos (1)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="em-analise-tab" data-toggle="tab" href="#em-analise" role="tab" aria-controls="em-analise" aria-selected="false">Em análise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="inativos-tab" data-toggle="tab" href="#inativos" role="tab" aria-controls="inativos" aria-selected="false">Inativos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="incompletos-tab" data-toggle="tab" href="#incompletos" role="tab" aria-controls="incompletos" aria-selected="false">Incompletos</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="anunciosTabContent">
+                        <div class="tab-pane fade show active" id="ativos" role="tabpanel" aria-labelledby="ativos-tab">
+                            <div class="ad-item">
+                                <img src="car.jpg" alt="Foto do veículo">
+                                <div class="ad-info">
+                                    <h5>Modelo do Carro</h5>
+                                    <p>Informação do carro</p>
+                                    <p>Informação do carro</p>
+                                    <p>Informação do carro</p>
+                                </div>
+                                <div class="ad-price">
+                                    R$ 50.000,00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="em-analise" role="tabpanel" aria-labelledby="em-analise-tab">
+                            <div class="ad-item">
+                                <img src="car.jpg" alt="Foto do veículo">
+                                <div class="ad-info">
+                                    <h5>Modelo do Carro</h5>
+                                    <p>Informação do carro</p>
+                                    <p>Informação do carro</p>
+                                    <p>Informação do carro</p>
+                                </div>
+                                <div class="ad-price">
+                                    R$ 50.000,00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="inativos" role="tabpanel" aria-labelledby="inativos-tab">
+                            <div class="ad-item">
+                                <img src="car.jpg" alt="Foto do veículo">
+                                <div class="ad-info">
+                                    <h5>Modelo do Carro</h5>
+                                    <p>Informação do carro</p>
+                                    <p>Informação do carro</p>
+                                    <p>Informação do carro</p>
+                                </div>
+                                <div class="ad-price">
+                                    R$ 50.000,00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="incompletos" role="tabpanel" aria-labelledby="incompletos-tab">
+                            <div class="ad-item">
+                                <img src="car.jpg" alt="Foto do veículo">
+                                <div class="ad-info">
+                                    <h5>Modelo do Carro</h5>
+                                    <p>Informação do carro</p>
+                                    <p>Informação do carro</p>
+                                    <p>Informação do carro</p>
+                                </div>
+                                <div class="ad-price">
+                                    R$ 50.000,00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer py-3 mt-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Carros Inc. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
