@@ -4,8 +4,8 @@ class DbConnection {
     private $server = "mysql";
     private $host = "br424.hostgator.com.br";
     private $db = "alsoac40_vrum";
-    private $user = "alsoac40_piquet";
-    private $senha = "Senna#Piquet";
+    private $user = "alsoac40_dw2a6";
+    private $senha = "MaçãComPaçoca2024";
     protected function connect() {
         try {
             $conn = new PDO(

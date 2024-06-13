@@ -1,7 +1,7 @@
 <?php
     $host = "br424.hostgator.com.br";
-    $user = "alsoac40_piquet";
-    $pass = "Senna#Piquet";
+    $user = "alsoac40_dw2a6";
+    $pass = "MaçãComPaçoca2024";
     $banco = "alsoac40_vrum";
     $porta = 3306;
 
@@ -11,4 +11,3 @@
   } catch (Exception $ex) {
       die ("Erro ao conectar.");
   }
-?>
