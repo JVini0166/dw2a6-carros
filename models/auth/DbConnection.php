@@ -1,15 +1,28 @@
+// models/auth/DbConnection.php
 <?php
+require_once __DIR__ . '/../../config/load_env.php';
 
 class DbConnection {
-    private $server = "mysql";
-    private $host = "br424.hostgator.com.br";
-    private $db = "alsoac40_vrum";
-    private $user = "alsoac40_dw2a6";
-    private $senha = "MaçãComPaçoca2024";
+    private $server;
+    private $host;
+    private $db;
+    private $user;
+    private $senha;
+    private $port;
+
+    public function __construct() {
+        $this->server = getenv('DB_SERVER');
+        $this->host = getenv('DB_HOST');
+        $this->db = getenv('DB_NAME');
+        $this->user = getenv('DB_USER');
+        $this->senha = getenv('DB_PASS');
+        $this->port = getenv('DB_PORT');
+    }
+
     protected function connect() {
         try {
             $conn = new PDO(
-                $this->server . ":host=" . $this->host . ";dbname=" . $this->db,
+                $this->server . ":host=" . $this->host . ";dbname=" . $this->db . ";port=" . $this->port,
                 $this->user,
                 $this->senha
             );
