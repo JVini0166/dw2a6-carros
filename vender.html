@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">LOGO</div>
+        <nav>
+            <a href="comprar.php">Comprar</a>
+            <a href="vender.html">Vender</a>
+            <a href="#">Serviços</a>
+            <a href="#">Ajuda</a>
+        </nav>
+        <a href="login.html" class="login-link">Entrar</a>
+    </header>
+    <div class="container">
+        <h1>Nova Venda</h1>
+        <div class="form-container">
+            <form action="vender.php" method="POST">
+                <div>
+                    <h2>Dados do veículo</h2>
+                    <input type="text" name="marca" placeholder="Marca" required>
+                    <input type="text" name="modelo" placeholder="Modelo" required>
+                    <input type="text" name="ano_modelo" placeholder="Ano do modelo" required>
+                    <input type="text" name="ano_fabricacao" placeholder="Ano de fabricação" required>
+                    <input type="text" name="versao" placeholder="Versão" required>
+                    <input type="text" name="cor" placeholder="Cor" required>
+                    <input type="text" name="quilometragem" placeholder="Quilometragem" required>
+                    <input type="text" name="valor" placeholder="Valor (R$)" required>
+                </div>
+                <div>
+                    <h2>Itens do veículo</h2>
+                    <input type="checkbox" name="airbag"> Airbag<br>
+                    <input type="checkbox" name="alarme"> Alarme<br>
+                    <input type="checkbox" name="ar_condicionado"> Ar Condicionado<br>
+                </div>
+                <button type="submit">Cadastrar Veículo</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>@criador</p>
+    </footer>
+</body>
+</html>

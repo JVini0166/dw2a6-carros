@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">LOGO</div>
+        <nav>
+            <a href="comprar.php">Comprar</a>
+            <a href="vender.html">Vender</a>
+            <a href="#">Serviços</a>
+            <a href="#">Ajuda</a>
+        </nav>
+        <a href="#" class="login-link">Entrar</a>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <div>
+                <h2>Cadastrar-se</h2>
+                <form action="register.php" method="POST">
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <input type="tel" name="telefone" placeholder="Seu telefone">
+                    <input type="password" name="senha" placeholder="Sua senha" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <div>
+                <h2>Logar</h2>
+                <form action="login.php" method="POST">
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <input type="password" name="senha" placeholder="Sua senha" required>
+                    <button type="submit">Logar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>@criador</p>
+    </footer>
+</body>
+</html>

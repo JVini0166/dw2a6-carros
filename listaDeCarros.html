@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros à Venda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">LOGO</div>
+        <nav>
+            <a href="comprar.php">Comprar</a>
+            <a href="vender.html">Vender</a>
+            <a href="#">Serviços</a>
+            <a href="#">Ajuda</a>
+        </nav>
+        <a href="#" class="login-link">Entrar</a>
+    </header>
+    <div class="container">
+        <h1>Carros à Venda</h1>
+        <div class="row">
+            <?php
+            include 'db.php';
+
+            $sql = "SELECT * FROM Veiculos";
+            $result = $conn->query($sql);
+
+            while ($row = $result->fetch_assoc()) {
+                echo "<div class='col-md-4'>";
+                echo "<div class='car-card'>";
+                echo "<h5>" . $row['marca'] . " " . $row['modelo'] . "</h5>";
+                echo "<div class='text-center mb-3'><img src='foto.jpg' alt='Foto do carro' class='img-fluid'></div>";
+                echo "<p>Ano: " . $row['ano_modelo'] . "</p>";
+                echo "<p>Quilometragem: " . $row['quilometragem'] . " km</p>";
+                echo "<p>Preço: R$ " . $row['valor'] . "</p>";
+                echo "<div class='d-flex justify-content-between align-items-center'>";
+                echo "<a href='comprar.html?id=" . $row['id'] . "' class='btn btn-warning'>Ver Parcelas</a>";
+                echo "</div></div></div>";
+            }
+
