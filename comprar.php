@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprar</title>
+    <title>Página Inicial</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -11,43 +11,60 @@
         .carousel-item {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .carousel-inner {
             display: flex;
             flex-wrap: nowrap;
         }
         .carousel-inner .carousel-item {
-            flex: 1 0 100%;
-        }
-        @media (min-width: 768px) {
-            .carousel-inner .carousel-item {
-                flex: 1 0 33.3333%;
-            }
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
         }
         .card {
             margin: 15px;
+        }
+        @media (max-width: 767px) {
+            .carousel-inner .carousel-item {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        .category-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .category {
+            flex: 0 0 18%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        .category-image img {
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
     <header class="header d-flex justify-content-between align-items-center p-3 bg-light">
         <div class="logo">LOGO</div>
-        <nav class="d-flex">
-            <a href="comprar.php" class="nav-link">Home</a>
-            <a href="vender.html" class="nav-link">Vender</a>
-            <a href="#" class="nav-link">Serviços</a>
-            <a href="#" class="nav-link">Ajuda</a>
+        <nav>
+            <a href="#" class="me-3">Comprar</a>
+            <a href="#" class="me-3">Vender</a>
+            <a href="#" class="me-3">Serviços</a>
+            <a href="#">Ajuda</a>
         </nav>
-        <a href="login.html" class="btn btn-outline-primary">Logout</a>
+        <a href="#" class="btn btn-outline-primary">Entrar</a>
     </header>
 
     <main class="content">
         <section class="search-bar p-3 bg-light" id="content-busca">
-            <div class="d-flex flex-wrap justify-content-between mb-3">
-                <button class="btn btn-secondary me-2 mb-2">Comprar carros</button>
-                <button class="btn btn-secondary me-2 mb-2">Comprar motos</button>
-                <button class="btn btn-secondary me-2 mb-2">Quero vender</button>
-                <button class="btn btn-secondary mb-2">Quero financiar</button>
+            <div class="search-options mb-3">
+                <button class="btn btn-secondary me-2">Comprar carros</button>
+                <button class="btn btn-secondary me-2">Comprar motos</button>
+                <button class="btn btn-secondary me-2">Quero vender</button>
+                <button class="btn btn-secondary">Quero financiar</button>
             </div>
             <div class="d-flex">
                 <input type="text" class="form-control me-2" placeholder="Digite marca ou modelo do veículo">
@@ -55,8 +72,11 @@
             </div>
         </section>
 
-        <section class="categories my-4">
+
+        <section class="carros my-4">
+        <h2>Carros em Destaque</h2>
             <div class="container">
+                
                 <div id="carrosCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <?php
@@ -70,8 +90,7 @@
                             while ($row = $result->fetch_assoc()) {
                                 $image = isset($row['image']) && !empty($row['image']) ? $row['image'] : './produto-sem-imagem.jpg';
                                 echo "<div class='carousel-item $active'>";
-                                echo "<div class='col-md-4'>";
-                                echo "<div class='card mb-4' onclick=\"window.location.href='listaDeCarros.html'\">";
+                                echo "<div class='card mb-4' onclick=\"window.location.href='detalhes.php?id=" . htmlspecialchars($row['id']) . "'\">";
                                 echo "<img src='public/$image' class='card-img-top' alt='Imagem do Veículo'>";
                                 echo "<div class='card-body'>";
                                 echo "<h5 class='card-title'>" . htmlspecialchars($row['marca']) . " " . htmlspecialchars($row['modelo']) . "</h5>";
@@ -83,7 +102,6 @@
                                 echo "Preço: R$ " . htmlspecialchars($row['valor']);
                                 echo "</p>";
                                 echo "<a href='detalhes.php?id=" . htmlspecialchars($row['id']) . "' class='btn btn-primary'>Ver Detalhes</a>";
-                                echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
